@@ -1,0 +1,40 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/babout"
+    android:orientation="vertical"
+    tools:context="com.example.hp1.movieapp.About" >
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="14dp"
+        android:text="in this app you can find movie \n trailers,rating,actors \n information about the movie \n and also you can find full \n movies in hd quality."
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#174096"
+        android:textSize="20sp"
+        android:textStyle="bold|italic" />
+
+    <Spinner
+        android:id="@+id/sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.26"
+        
+         />
+
+    <Button
+        android:id="@+id/breturn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="170dp"
+        android:text="return"
+        android:textColor="#309227" />
+
+</LinearLayout>

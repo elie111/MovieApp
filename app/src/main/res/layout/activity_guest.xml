@@ -1,0 +1,381 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/homeb"
+    android:orientation="vertical"
+    tools:context="com.example.hp1.movieapp.Guest" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/bsignin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text=" sign in"
+            android:textColor="#22f00f" />
+
+        <TextView
+            android:id="@+id/tvmovies"
+            android:layout_width="wrap_content"
+            android:layout_height="52dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:text="MOVIES"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#22f00f"
+             android:textStyle="bold|italic"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/blog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:text="logout"
+            android:textColor="#22f00f" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvsign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="if you want to watch movie trailers sign in"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#22f00f" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="161dp" >
+
+        <ImageView
+            android:id="@+id/imcentral"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/ci" />
+
+        <ImageView
+            android:id="@+id/imdeadpool"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imcentral"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/imcentral"
+            android:src="@drawable/deadpool"
+            android:visibility="invisible" />
+
+        <ScrollView
+            android:id="@+id/scrollView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="33dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tvcentral"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="50dp"
+                    android:layout_marginLeft="90dp"
+                    android:text="Central Intelligence is a 2016 American comedy film directed.played by keven hart and dwayne jhonson."
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+            </LinearLayout>
+
+        </ScrollView>
+
+        <ImageView
+            android:id="@+id/imsuicide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imcentral"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/imcentral"
+            android:src="@drawable/ssm"
+            android:visibility="invisible" />
+
+        <ScrollView
+            android:id="@+id/scrollView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tvsuicide"
+                    android:layout_width="201dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:text="Suicide Squad is a 2016 American superhero film based on the DC Comics antihero team of the same name. It is the third installment in the DC Extended Universe."
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <ImageView
+            android:id="@+id/imthehang"
+            android:layout_width="62dp"
+            android:layout_height="84dp"
+            android:layout_alignBottom="@+id/imcentral"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/imcentral"
+            android:src="@drawable/thehang"
+            android:visibility="invisible" />
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <ScrollView
+                    android:id="@+id/scrollView8"
+                    android:layout_width="181dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tvdeadpool"
+                            android:layout_width="188dp"
+                            android:layout_height="94dp"
+                            android:text="Based upon Marvel Comics&apos; most unconventional anti-hero, DEADPOOL tells the origin story of former Special Forces operative turned mercenary Wade Wilson, who after being subjected to a rogue experiment that leaves him with accelerated healing powers, adopts the alter ego Deadpool. Armed with his new abilities and a dark, twisted sense of humor, Deadpool hunts down the man who nearly destroyed his life."
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:visibility="invisible" />
+
+                    </LinearLayout>
+                </ScrollView>
+
+                <TextView
+                    android:id="@+id/tvthehang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:text="The Hangover Part III is a 2013 American comedy film produced by Legendary Pictures and distributed by Warner Bros. Pictures. It is the third and final installment in The Hangover trilogy."
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.39" >
+
+        <ImageView
+            android:id="@+id/imwhyhim"
+            android:layout_width="83dp"
+            android:layout_height="215dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/whyhim" />
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="100dp"
+            android:layout_marginTop="36dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tvwhyhim"
+                    android:layout_width="177dp"
+                    android:layout_height="70dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="100dp"
+                    android:layout_weight="0.61"
+                    android:text="Over the holidays, Ned, an overprotective but loving dad and his family visit his daughter at Stanford, where he meets his biggest nightmare: her well-meaning but socially awkward Silicon Valley billionaire boyfriend, Laird . The straight-laced Ned thinks Laird, who has absolutely no filter, is a wildly inappropriate match for his daughter. The one-sided rivalry-and Ned&apos;s panic level-escalate when he finds himself increasingly out of step in the glamorous high-tech hub, and learns that Laird is about to pop the question."
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <ImageView
+            android:id="@+id/imvacation"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/vacation"
+            android:visibility="invisible" />
+
+        <ScrollView
+            android:id="@+id/scrollView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="30dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tvvacation"
+                    android:layout_width="161dp"
+                    android:layout_height="94dp"
+                    android:text="Vacation is a 2015 American comedy film written and directed by Jonathan Goldstein and John Francis Daley. It stars Ed Helms, Christina Applegate, Skyler Gisondo, Steele Stebbins, Leslie Mann, Chris Hemsworth, Beverly D&apos;Angelo, and Chevy Chase."
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <ImageView
+            android:id="@+id/imfist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/fist"
+            android:visibility="invisible" />
+
+        <ScrollView
+            android:id="@+id/scrollView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/scrollView2"
+            android:layout_centerVertical="true" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tvfist"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginRight="0dp"
+                    android:text="On the last day before summer vacation, high school teacher Andy Campbell tries his best to keep it together amid senior pranks, a dysfunctional administration and budget cuts that threaten his job. Things go from bad to worse when he crosses Ron Strickland, the school&apos;s toughest and most feared teacher. When Strickland gets fired, he challenges Campbell to a fight after school. As news of the showdown spreads like wildfire, poor Andy desperately seeks any way out of his date with certain doom"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <ImageView
+            android:id="@+id/imlastvegas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/imfist"
+            android:src="@drawable/lastvegas"
+            android:visibility="invisible" />
+
+        <ScrollView
+            android:id="@+id/scrollView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tvlastvegas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:layout_weight="0.19"
+                    android:text="Last Vegas is a 2013 American comedy film directed by Jon Turteltaub, written by Dan Fogelman and starring Michael Douglas, Robert De Niro, Morgan Freeman, Kevin Kline and Mary Steenburgen."
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" >
+
+        <Button
+            android:id="@+id/b1"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/b2"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/b3"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3" />
+
+        <Button
+            android:id="@+id/b4"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4" />
+
+        <Button
+            android:id="@+id/b5"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5" />
+
+        <Button
+            android:id="@+id/b6"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6" />
+    </LinearLayout>
+
+</LinearLayout>
