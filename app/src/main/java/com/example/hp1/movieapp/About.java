@@ -15,7 +15,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class About extends Activity implements OnClickListener, OnItemSelectedListener{
+public class About extends Activity implements OnClickListener{
 	TextView tv;
 	Button breturn;
 	Spinner sp;
@@ -41,7 +41,7 @@ public class About extends Activity implements OnClickListener, OnItemSelectedLi
 
 		adapter=new ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item,al);
 		sp.setAdapter(adapter);
-		sp.setOnItemSelectedListener(this);
+	//	sp.setOnItemSelectedListener(this);
 
 
 	}
@@ -53,8 +53,8 @@ public class About extends Activity implements OnClickListener, OnItemSelectedLi
 			startActivity(i);
 		}
 	}
-	@Override
-	public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+   /*public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 		// TODO Auto-generated method stub
 		if(position==1)
 			Toast.makeText(getApplicationContext(), "toast", Toast.LENGTH_SHORT).show();
@@ -69,6 +69,7 @@ public class About extends Activity implements OnClickListener, OnItemSelectedLi
 	}
 
 	@Override
+	*/
 	public void onNothingSelected(AdapterView<?> parent) {
 		// TODO Auto-generated method stub
 

@@ -6,20 +6,19 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 public class Guest extends Activity implements OnClickListener{
 	Button b1,b2,b3,b4,b5,b6,bsign,blog;
 	TextView tvmovies,tvsign,tvci;
-	ImageView[] imv=new ImageView[4];
-	ImageView[] imv2=new ImageView[4];
+	ImageButton[] imv=new ImageButton[4];
+	ImageButton[] imv2=new ImageButton[4];
 	int[] im={R.id.imcentral,R.id.imdeadpool,R.id.imsuicide,R.id.imthehang};
 	int[] im2={R.id.imwhyhim,R.id.imvacation,R.id.imfist,R.id.imlastvegas};
-	TextView[] info=new TextView[4];
-	TextView[] info2=new TextView[4];
-	int[]tvi={R.id.tvcentral,R.id.tvdeadpool,R.id.tvsuicide,R.id.tvthehang};
-	int[]tvi2={R.id.tvwhyhim,R.id.tvvacation,R.id.tvfist,R.id.tvlastvegas};
+
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -38,17 +37,14 @@ public class Guest extends Activity implements OnClickListener{
 		tvsign=(TextView)findViewById(R.id.tvsign);
 
 		for(int i=0;i<im.length;i++){
-			imv[i]=(ImageView)findViewById(im[i]);
+			imv[i]=(ImageButton) findViewById(im[i]);
+			imv[i].setOnClickListener(this);
 		}
 		for(int i=0;i<im2.length;i++){
-			imv2[i]=(ImageView)findViewById(im2[i]);
+			imv2[i]=(ImageButton) findViewById(im2[i]);
+			imv2[i].setOnClickListener(this);
 		}
-		for(int i=0;i<info.length;i++){
-			info[i]=(TextView)findViewById(tvi[i]);
-		}
-		for(int i=0;i<info2.length;i++){
-			info2[i]=(TextView)findViewById(tvi2[i]);
-		}
+
 
 
 
@@ -60,6 +56,7 @@ public class Guest extends Activity implements OnClickListener{
 		b6.setOnClickListener(this);
 		bsign.setOnClickListener(this);
 		blog.setOnClickListener(this);
+
 
 
 	}
@@ -81,14 +78,12 @@ public class Guest extends Activity implements OnClickListener{
 				if(i==0){
 					imv[i].setVisibility(View.VISIBLE);
 					imv2[i].setVisibility(View.VISIBLE);
-					info[i].setVisibility(View.VISIBLE);
-					info2[i].setVisibility(View.VISIBLE);
+
 				}
 				else{
 					imv[i].setVisibility(View.INVISIBLE);
 					imv2[i].setVisibility(View.INVISIBLE);
-					info[i].setVisibility(View.INVISIBLE);
-					info2[i].setVisibility(View.INVISIBLE);
+
 				}
 
 			}
@@ -98,14 +93,12 @@ public class Guest extends Activity implements OnClickListener{
 				if(i==1){
 					imv[i].setVisibility(View.VISIBLE);
 					imv2[i].setVisibility(View.VISIBLE);
-					info[i].setVisibility(View.VISIBLE);
-					info2[i].setVisibility(View.VISIBLE);
+					;
 				}
 				else{
 					imv[i].setVisibility(View.INVISIBLE);
 					imv2[i].setVisibility(View.INVISIBLE);
-					info[i].setVisibility(View.INVISIBLE);
-					info2[i].setVisibility(View.INVISIBLE);
+
 				}
 
 			}
@@ -116,14 +109,12 @@ public class Guest extends Activity implements OnClickListener{
 				if(i==2){
 					imv[i].setVisibility(View.VISIBLE);
 					imv2[i].setVisibility(View.VISIBLE);
-					info[i].setVisibility(View.VISIBLE);
-					info2[i].setVisibility(View.VISIBLE);
+
 				}
 				else{
 					imv[i].setVisibility(View.INVISIBLE);
 					imv2[i].setVisibility(View.INVISIBLE);
-					info[i].setVisibility(View.INVISIBLE);
-					info2[i].setVisibility(View.INVISIBLE);
+
 				}}
 
 		}if(v==b4){
@@ -131,14 +122,12 @@ public class Guest extends Activity implements OnClickListener{
 				if(i==3){
 					imv[i].setVisibility(View.VISIBLE);
 					imv2[i].setVisibility(View.VISIBLE);
-					info[i].setVisibility(View.VISIBLE);
-					info2[i].setVisibility(View.VISIBLE);
+
 				}
 				else{
 					imv[i].setVisibility(View.INVISIBLE);
 					imv2[i].setVisibility(View.INVISIBLE);
-					info[i].setVisibility(View.INVISIBLE);
-					info2[i].setVisibility(View.INVISIBLE);
+
 				}}
 
 		}/*if(v==b5){
