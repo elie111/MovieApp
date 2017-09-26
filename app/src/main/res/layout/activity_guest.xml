@@ -10,7 +10,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content">
 
         <Button
             android:id="@+id/bsignin"
@@ -50,93 +50,45 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="#22f00f" />
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="161dp" >
+        android:layout_height="120dp"
+        android:orientation="horizontal">
 
 
         <ImageButton
             android:layout_width="100dp"
-            android:layout_height="wrap_content"
             app:srcCompat="@drawable/ci"
             android:id="@+id/imcentral"
             android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true" />
-
-        <ImageButton
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/deadpool"
-            android:id="@+id/imdeadpool"
-            android:layout_alignParentTop="true"
             android:layout_alignParentStart="true"
-            android:layout_width="100dp"
-            android:visibility="invisible" />
+            android:layout_height="wrap_content" />
 
-        <ImageButton
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ssm"
-            android:id="@+id/imsuicide"
-            android:visibility="invisible" />
+    </LinearLayout>
 
-        <ImageButton
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/thehang"
-            android:id="@+id/imthehang"
-            android:visibility="invisible" />
-
-    </RelativeLayout>
-
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.39" >
+        android:layout_height="184dp"
+        android:orientation="horizontal">
 
 
         <ImageButton
             android:layout_width="100dp"
-            android:layout_height="wrap_content"
+            android:layout_height="141dp"
             app:srcCompat="@drawable/whyhim"
             android:layout_centerVertical="true"
             android:id="@+id/imwhyhim"
-            android:layout_alignParentStart="true" />
-
-        <ImageButton
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/vacation"
-            android:id="@+id/imvacation"
-            android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true"
-            android:layout_alignEnd="@+id/imfist"
-            android:visibility="invisible" />
+            android:layout_marginTop="40dp"
+            android:visibility="visible" />
 
-        <ImageButton
-            android:layout_width="100dp"
-            android:layout_height="161dp"
-            app:srcCompat="@drawable/fist"
-            android:layout_toEndOf="@+id/imcentral"
-            android:id="@+id/imfist"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true"
-            android:visibility="invisible" />
-
-        <ImageButton
-            android:layout_width="100dp"
-            android:layout_height="161dp"
-            app:srcCompat="@drawable/lastvegas"
-            android:id="@+id/imlastvegas"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true"
-            android:visibility="invisible" />
-
-    </RelativeLayout>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp" >
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/b1"

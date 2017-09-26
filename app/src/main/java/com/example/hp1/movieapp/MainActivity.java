@@ -50,6 +50,7 @@ public class MainActivity extends Activity  implements OnClickListener,OnItemCli
 		al.add("vecation");
 		al.add("fist fight");
 		al.add("last vegas");
+
 		
 		
 		
@@ -63,6 +64,7 @@ public class MainActivity extends Activity  implements OnClickListener,OnItemCli
 		for(int i=0;i<m.length;i++){
 			m[i]=(ImageView)findViewById(mid[i]);
 		}
+
 		
 	}
 
@@ -98,9 +100,9 @@ public class MainActivity extends Activity  implements OnClickListener,OnItemCli
 		for(int i=0;i<m.length;i++){
 			m[i].setVisibility(View.INVISIBLE);
 		}
+
 	m[position].setVisibility(View.VISIBLE);
-			
-				
+
 			
 	}
 
