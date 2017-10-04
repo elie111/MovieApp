@@ -5,6 +5,9 @@ import java.util.ArrayList;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
@@ -19,11 +22,11 @@ import android.widget.TextView;
 public class MainActivity extends Activity  implements OnClickListener,OnItemClickListener{
 	Button blog,bsign,bguest,babout,bdelete;
 	TextView tvmovies;
-	 ListView lv;
-	 ArrayAdapter<String>Adapter;
-	 ImageView[] m=new ImageView[8];
+	ListView lv;
+	ArrayAdapter<String>Adapter;
+	ImageView[] m=new ImageView[8];
 	int[] mid={R.id.imci,R.id.imdeadpool,R.id.imssm,R.id.imthehang,R.id.imwhyhim,R.id.imvacation,R.id.imfist,R.id.imlastvegas};
-     ArrayList<String>al=new ArrayList<String>();
+	ArrayList<String>al=new ArrayList<String>();
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -51,12 +54,12 @@ public class MainActivity extends Activity  implements OnClickListener,OnItemCli
 		al.add("fist fight");
 		al.add("last vegas");
 
-		
-		
-		
-		
-		
-		
+
+
+
+
+
+
 		Adapter=new ArrayAdapter<String>(getApplicationContext(),android.R.layout.simple_list_item_1,al);
 		lv=(ListView)findViewById(R.id.lv);
 		lv.setAdapter(Adapter);
@@ -65,7 +68,7 @@ public class MainActivity extends Activity  implements OnClickListener,OnItemCli
 			m[i]=(ImageView)findViewById(mid[i]);
 		}
 
-		
+
 	}
 
 	@Override
@@ -101,9 +104,25 @@ public class MainActivity extends Activity  implements OnClickListener,OnItemCli
 			m[i].setVisibility(View.INVISIBLE);
 		}
 
-	m[position].setVisibility(View.VISIBLE);
+		m[position].setVisibility(View.VISIBLE);
 
-			
+
+	}
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		MenuInflater inflater = getMenuInflater();
+		inflater.inflate(R.menu.loginm, menu);
+		return true;
 	}
 
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+			case R.id.a:
+				// do whatever
+				return true;
+			default:
+				return super.onOptionsItemSelected(item);
+		}
+	}
 }

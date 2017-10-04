@@ -18,10 +18,6 @@ import android.widget.Toast;
 public class About extends Activity implements OnClickListener{
 	TextView tv;
 	Button breturn;
-	Spinner sp;
-	String[]splist={"toast","intent"};
-	ArrayList<String>al=new ArrayList<String>();
-	ArrayAdapter<String> adapter;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -31,17 +27,11 @@ public class About extends Activity implements OnClickListener{
 
 		tv=(TextView)findViewById(R.id.tv);
 
-		sp=(Spinner)findViewById(R.id.sp);
+
 
 		breturn.setOnClickListener(this);
-		al.add("");
-		al.add("toast");
 
-		al.add("intent");
 
-		adapter=new ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item,al);
-		sp.setAdapter(adapter);
-	//	sp.setOnItemSelectedListener(this);
 
 
 	}

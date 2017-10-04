@@ -8,6 +8,9 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.app.AlertDialog;
+import android.app.AlertDialog.Builder;
+import android.content.DialogInterface;
 
 public class Delete extends Activity implements OnClickListener{
 Button breturn,bdelete;
@@ -18,8 +21,8 @@ EditText etmail,etpass;
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_delete);
 		breturn=(Button)findViewById(R.id.breturn);
-	//	bdelete=(Button)findViewById(R.id.delete);
-		
+		bdelete=(Button)findViewById(R.id.bdelete);
+
 		tvmail=(TextView)findViewById(R.id.tvmail);
 		tvpass=(TextView)findViewById(R.id.tvpass);
 		tvdelete=(TextView)findViewById(R.id.tvdelete);
@@ -29,6 +32,9 @@ EditText etmail,etpass;
 		
 		breturn.setOnClickListener(this);
 	//	bdelete.setOnClickListener(this);
+
+
+		bdelete.setOnClickListener(this);
 	}
 	@Override
 	public void onClick(View v) {
@@ -37,9 +43,24 @@ EditText etmail,etpass;
 			Intent intent=new Intent(this,MainActivity.class);
 			startActivity(intent);
 		}
-		if(v==bdelete){
-			etpass.setText("");
-			etmail.setText("");
-		}
+
+			Builder alert = new AlertDialog.Builder(this);
+			alert.setMessage("are you sure?");
+			alert.setTitle("delete acount");
+			alert.setNegativeButton("no", null);
+			alert.setPositiveButton("yes", new DialogInterface.OnClickListener() {
+				@Override
+				public void onClick(DialogInterface dialog, int which) {
+
+					etpass.setText("");
+					etmail.setText("");
+
+				}
+			});
+
+if(v==bdelete){
+	alert.show();
+}
+
 	}
 }
