@@ -3,6 +3,7 @@ package com.example.hp1.movieapp;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -12,7 +13,7 @@ import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
 import android.content.DialogInterface;
 
-public class Delete extends Activity implements OnClickListener{
+public class Delete extends AppCompatActivity implements OnClickListener{
 Button breturn,bdelete;
 TextView tvmail,tvpass,tvdelete;
 EditText etmail,etpass;

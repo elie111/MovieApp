@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -19,7 +20,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 
-public class MainActivity extends Activity  implements OnClickListener,OnItemClickListener{
+public class MainActivity extends AppCompatActivity implements OnClickListener,OnItemClickListener{
 	Button blog,bsign,bguest,babout,bdelete;
 	TextView tvmovies;
 	ListView lv;

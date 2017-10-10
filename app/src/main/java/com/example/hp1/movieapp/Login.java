@@ -1,8 +1,6 @@
 package com.example.hp1.movieapp;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -13,10 +11,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.support.v7.app.AppCompatActivity;
 
-import java.util.zip.Inflater;
 
-public class Login extends Activity implements OnClickListener{
+public class Login extends AppCompatActivity implements OnClickListener{
 	Button breturn,blogin;
 	TextView tvwelcome,tvmail,tvpassword;
 	EditText etmail,etpassword;
@@ -29,7 +27,8 @@ public class Login extends Activity implements OnClickListener{
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_login);
+		setContentView(R.layout.login2_layout);
+
 		breturn=(Button)findViewById(R.id.breturn);
 		blogin=(Button)findViewById(R.id.blogin);
 
@@ -89,6 +88,8 @@ public class Login extends Activity implements OnClickListener{
 				return super.onOptionsItemSelected(item);
 		}
 	}
+
+
 }
 
 

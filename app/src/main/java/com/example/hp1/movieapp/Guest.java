@@ -5,6 +5,7 @@ import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -13,7 +14,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class Guest extends Activity implements OnClickListener{
+public class Guest extends AppCompatActivity implements OnClickListener{
 	Button b1,b2,b3,b4,b5,b6,bsign,blog;
 	TextView tvmovies,tvsign,tvci;
 	/*ImageButton[] imv=new ImageButton[4];
