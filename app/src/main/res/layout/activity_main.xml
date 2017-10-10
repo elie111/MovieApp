@@ -10,7 +10,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.movieapp.MainActivity" >
+    tools:context="com.example.hp1.movieapp.MainActivity" >
 
     <TextView
         android:id="@+id/tvmovies"
@@ -58,15 +58,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp" >
-
-        <Button
-            android:id="@+id/babout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="0dp"
-            android:text="about"
-            android:textColor="#309227" />
 
         <Button
             android:id="@+id/btdelete"

@@ -27,7 +27,7 @@ public class Login extends AppCompatActivity implements OnClickListener{
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.login2_layout);
+		setContentView(R.layout.activity_login);
 
 		breturn=(Button)findViewById(R.id.breturn);
 		blogin=(Button)findViewById(R.id.blogin);
@@ -71,23 +71,10 @@ public class Login extends AppCompatActivity implements OnClickListener{
 			}
 		}
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		MenuInflater inflater = getMenuInflater();
-		inflater.inflate(R.menu.loginm, menu);
-		return true;
-	}
 
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		switch (item.getItemId()) {
-			case R.id.a:
-				// do whatever
-				return true;
-			default:
-				return super.onOptionsItemSelected(item);
-		}
-	}
+
+
+
 
 
 }

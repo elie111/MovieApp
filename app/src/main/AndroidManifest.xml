@@ -21,7 +21,6 @@
         <activity android:name=".Home" android:theme="@style/AppTheme"/>
         <activity android:name=".Login" ></activity>
         <activity android:name=".Sign" android:theme="@style/AppTheme"/>
-        <activity android:name=".Main2Activity"></activity>
     </application>
 
 </manifest>

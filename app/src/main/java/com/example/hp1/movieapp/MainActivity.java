@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,O
 		blog=(Button)findViewById(R.id.blog);
 		bsign=(Button)findViewById(R.id.bsign);
 		bguest=(Button)findViewById(R.id.bguest);
-		babout=(Button)findViewById(R.id.babout);
+
 		bdelete=(Button)findViewById(R.id.btdelete);
 
 		tvmovies=(TextView)findViewById(R.id.tvmovies);
@@ -76,10 +76,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,O
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
 		Intent i;
-		if(v==babout){
-			i=new Intent(MainActivity.this, About.class);
-			startActivity(i);
-		}
 		if(v==blog){
 			i=new Intent(MainActivity.this,Login.class);
 			startActivity(i);
@@ -115,15 +111,20 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,O
 		inflater.inflate(R.menu.loginm, menu);
 		return true;
 	}
-
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
-			case R.id.a:
-				// do whatever
-				return true;
+			case R.id.aboutMenu:
+				Intent i=new Intent(MainActivity.this, About.class);
+				startActivity(i);
 			default:
 				return super.onOptionsItemSelected(item);
 		}
 	}
+
+
+
+
+
+
 }
