@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,O
 		blog.setOnClickListener(this);
 		bsign.setOnClickListener(this);
 		bguest.setOnClickListener(this);
-		babout.setOnClickListener(this);
 		bdelete.setOnClickListener(this);
 		al.add("central intelligence");
 		al.add("deadpool");

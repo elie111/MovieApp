@@ -15,12 +15,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".About" android:theme="@style/AppTheme"/>
-        <activity android:name=".Delete" android:theme="@style/AppTheme"/>
-        <activity android:name=".Guest" android:theme="@style/AppTheme"/>
-        <activity android:name=".Home" android:theme="@style/AppTheme"/>
-        <activity android:name=".Login" ></activity>
-        <activity android:name=".Sign" android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".About"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Delete"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Guest"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Home"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".Login" />
+        <activity
+            android:name=".Sign"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".camera"></activity>
     </application>
 
 </manifest>
