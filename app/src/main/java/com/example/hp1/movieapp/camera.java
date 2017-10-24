@@ -5,16 +5,20 @@ import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
-import android.preference.PreferenceManager;
+import android.os.Bundle;
+import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class camera extends AppCompatActivity implements View.OnClickListener{
     private ImageView imageView;
@@ -80,5 +84,28 @@ public class camera extends AppCompatActivity implements View.OnClickListener{
 
 
         }
+    }
+    public File saveImage(Bitmap bitmap){
+        File root = Environment.getExternalStorageDirectory();// internal storage launching .
+        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+
+
+        String filePath = root.getAbsolutePath()+"/DCIM/Camera/IMG_"+timeStamp+".jpg";
+        File file = new File(filePath);// determinig the type of the file and its place.
+
+        try
+        {
+            // if gallary nit full create a file and save images
+            file.createNewFile();// create new file to save image.
+            FileOutputStream ostream = new FileOutputStream(file);//saves root in this file
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, ostream);// compass bitmap in file
+            ostream.close();// close
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+            Toast.makeText(this, "Faild to save image", Toast.LENGTH_SHORT).show();
+        }
+        return file;
     }
 }
