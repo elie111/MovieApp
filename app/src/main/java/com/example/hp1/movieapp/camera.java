@@ -1,6 +1,7 @@
 package com.example.hp1.movieapp;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -88,11 +89,15 @@ public class camera extends AppCompatActivity implements View.OnClickListener{
     public File saveImage(Bitmap bitmap){
         File root = Environment.getExternalStorageDirectory();// internal storage launching .
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+        SharedPreferences pref =getSharedPreferences("mypref",MODE_PRIVATE);
+        SharedPreferences.Editor editor=pref.edit();
+
 
 
         String filePath = root.getAbsolutePath()+"/DCIM/Camera/IMG_"+timeStamp+".jpg";
         File file = new File(filePath);// determinig the type of the file and its place.
-
+        editor.putString("filepath",filePath);
+        editor.commit();
         try
         {
             // if gallary nit full create a file and save images
