@@ -27,9 +27,6 @@ public class About extends AppCompatActivity implements OnClickListener{
 		breturn=(Button)findViewById(R.id.breturn);
 
 		tv=(TextView)findViewById(R.id.tv);
-
-
-
 		breturn.setOnClickListener(this);
 
 
