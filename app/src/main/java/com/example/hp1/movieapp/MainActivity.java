@@ -2,7 +2,6 @@ package com.example.hp1.movieapp;
 
 import java.util.ArrayList;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -113,9 +112,13 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,O
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
-			case R.id.aboutMenu:
-				Intent i=new Intent(MainActivity.this, About.class);
+			case R.id.camera:{
+				Intent i=new Intent(getBaseContext(), Camera.class);
+				startActivity(i);}
+			case R.id.aboutMenu: {
+				Intent i = new Intent(MainActivity.this, About.class);
 				startActivity(i);
+			}
 			default:
 				return super.onOptionsItemSelected(item);
 		}
