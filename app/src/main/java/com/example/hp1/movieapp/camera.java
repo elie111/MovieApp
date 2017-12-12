@@ -21,7 +21,7 @@ import java.io.FileOutputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Camera extends AppCompatActivity implements View.OnClickListener{
+public class camera extends AppCompatActivity implements View.OnClickListener{
     private ImageView imageView;
     private Button bcamera,bgalery;
     private Bitmap bitmap;

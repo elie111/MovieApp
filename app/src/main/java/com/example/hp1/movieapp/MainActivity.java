@@ -111,17 +111,19 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,O
 	}
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
+		Intent i;
 		switch (item.getItemId()) {
-			case R.id.camera:{
-				Intent i=new Intent(getBaseContext(), Camera.class);
-				startActivity(i);}
-			case R.id.aboutMenu: {
-				Intent i = new Intent(MainActivity.this, About.class);
+			case R.id.camera:
+				i = new Intent(getApplicationContext(), camera.class);
 				startActivity(i);
-			}
-			default:
-				return super.onOptionsItemSelected(item);
+				break;
+			case R.id.aboutMenu:
+				i = new Intent(MainActivity.this, About.class);
+				startActivity(i);
+				break;
 		}
+			return super.onOptionsItemSelected(item);
+
 	}
 
 

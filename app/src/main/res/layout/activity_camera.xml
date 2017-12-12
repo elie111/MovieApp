@@ -10,8 +10,10 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
+    android:background="@drawable/bs"
 
-    tools:context="com.example.hp1.movieapp.Camera">
+    tools:context="com.example.hp1.movieapp.camera"
+    android:weightSum="1">
 
     <Button
         android:text="camera"
@@ -19,7 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/button"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="46dp"
+        android:layout_marginTop="10dp"
         android:id="@+id/bcamera" />
 
     <Button
@@ -29,9 +31,10 @@
         android:id="@+id/bgalery" />
 
     <ImageView
-        android:layout_width="100dp"
+        android:layout_width="157dp"
         android:layout_height="100dp"
         app:srcCompat="@drawable/black"
         android:id="@+id/im"
-        android:layout_marginLeft="125dp" />
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="50dp" />
 </LinearLayout>
