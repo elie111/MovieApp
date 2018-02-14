@@ -14,6 +14,8 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class Guest extends AppCompatActivity implements OnClickListener{
 	Button b1,b2,b3,b4,b5,b6,bsign,blog;
 	TextView tvmovies,tvsign,tvci;
@@ -29,11 +31,23 @@ public class Guest extends AppCompatActivity implements OnClickListener{
 
 	int youtube1,youtube2;
 
+	ArrayList<Movie> movies = new ArrayList<>();
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_guest);
+
+
+		movies.add(new Movie("2016","central intelligence","comedy",R.drawable.ci, "MxEw3elSJ8M"));
+		movies.add(new Movie("2016","why him?","comedy",R.drawable.whyhim, "CO6qLC4cL8E"));
+		movies.add(new Movie("2016","deadpool","comedy",R.drawable.deadpool, "9vN6DHB6bJc"));
+		movies.add(new Movie("2015","vacation","comedy",R.drawable.vacation, "kleG7XCqOb4"));
+		movies.add(new Movie("2016","suicide squad","action",R.drawable.ssm, "5AwUdTIbA8I"));
+		movies.add(new Movie("2017","fist fight","comedy",R.drawable.fist, "6YVBj2o_3mg"));
+		movies.add(new Movie("2009","the hangover","comedy",R.drawable.thehang, "KLAkxSjs8Z"));
+		movies.add(new Movie("2013","last vegas","comedy",R.drawable.lastvegas, "TvK3m0wJutI"));
+
 		b1=(Button)findViewById(R.id.b1);
 		b2=(Button)findViewById(R.id.b2);
 		b3=(Button)findViewById(R.id.b3);

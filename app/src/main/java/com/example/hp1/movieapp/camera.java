@@ -56,7 +56,7 @@ public class camera extends AppCompatActivity implements View.OnClickListener{
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if(requestCode==TAKE_IMAGE&& resultCode==RESULT_OK){
             Bundle Extra =data.getExtras();
-            bitmap=(Bitmap) Extra.get("data");
+            bitmap=(Bitmap) Extra.get("Data");
             imageView.setImageBitmap(bitmap);
         }
         else if(requestCode==SELECT_IMAGE && resultCode==RESULT_OK){
