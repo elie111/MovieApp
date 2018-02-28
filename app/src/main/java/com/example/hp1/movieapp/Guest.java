@@ -1,6 +1,5 @@
 package com.example.hp1.movieapp;
 
-import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
@@ -9,14 +8,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class Guest extends AppCompatActivity implements OnClickListener{
+public class Guest extends AppCompatActivity implements OnClickListener {
 	Button b1,b2,b3,b4,b5,b6,bsign,blog;
 	TextView tvmovies,tvsign,tvci;
 	/*ImageButton[] imv=new ImageButton[4];
@@ -30,7 +31,8 @@ public class Guest extends AppCompatActivity implements OnClickListener{
 	int[] photo2={R.drawable.whyhim,R.drawable.vacation,R.drawable.fist,R.drawable.lastvegas};
 
 	int youtube1,youtube2;
-
+	ListView lv1;
+	ArrayAdapter<Movie> Adapter;
 	ArrayList<Movie> movies = new ArrayList<>();
 
 	@Override
@@ -48,12 +50,7 @@ public class Guest extends AppCompatActivity implements OnClickListener{
 		movies.add(new Movie("2009","the hangover","comedy",R.drawable.thehang, "KLAkxSjs8Z"));
 		movies.add(new Movie("2013","last vegas","comedy",R.drawable.lastvegas, "TvK3m0wJutI"));
 
-		b1=(Button)findViewById(R.id.b1);
-		b2=(Button)findViewById(R.id.b2);
-		b3=(Button)findViewById(R.id.b3);
-		b4=(Button)findViewById(R.id.b4);
-		b5=(Button)findViewById(R.id.b5);
-		b6=(Button)findViewById(R.id.b6);
+
 		bsign=(Button)findViewById(R.id.bsignin);
 		blog=(Button)findViewById(R.id.blog);
 
@@ -63,16 +60,13 @@ public class Guest extends AppCompatActivity implements OnClickListener{
 
 
 
-		imv1=(ImageButton)findViewById(R.id.imcentral);
-		imv2=(ImageButton) findViewById(R.id.imwhyhim);
+		Adapter=new ArrayAdapter<Movie>(getApplicationContext(),android.R.layout.simple_list_item_1,movies);
+		lv1=(ListView)findViewById(R.id.lv);
+		lv1.setAdapter(Adapter);
+		lv1.setOnItemClickListener((AdapterView.OnItemClickListener) this);
 
 
-		b1.setOnClickListener(this);
-		b2.setOnClickListener(this);
-		b3.setOnClickListener(this);
-		b4.setOnClickListener(this);
-		b5.setOnClickListener(this);
-		b6.setOnClickListener(this);
+
 		bsign.setOnClickListener(this);
 		blog.setOnClickListener(this);
 
@@ -96,11 +90,13 @@ public class Guest extends AppCompatActivity implements OnClickListener{
 			Log.d("Cannot Play Video",ex.toString());
 		}
 	}
+
+
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
 		if(v==bsign){
-			Intent intent=new Intent(this,Sign.class);
+			Intent intent=new Intent(this,SignUp.class);
 			startActivity(intent);
 		}
 		if(v==blog){
@@ -109,7 +105,7 @@ public class Guest extends AppCompatActivity implements OnClickListener{
 
 		}
 
-		if(v==b1){
+	/*	if(v==b1){
 
 
 			imv1.setImageResource(photo1[0]);
@@ -138,7 +134,7 @@ youtube1=1;
 			youtube1=4;
 			youtube2=4;
 		}
-
+*/
 		if(v==imv1){
 			if(youtube1==1)
 			watchYoutubeVideo("MxEw3elSJ8M");

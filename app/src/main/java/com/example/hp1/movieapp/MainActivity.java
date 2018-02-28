@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,O
 			startActivity(i);
 		}
 		if(v==bsign){
-			i=new Intent(MainActivity.this, Sign.class);
+			i=new Intent(MainActivity.this, SignUp.class);
 			startActivity(i);
 		}
 		if(v==bguest){

@@ -32,7 +32,7 @@
             android:theme="@style/AppTheme" />
         <activity android:name=".Login" />
         <activity
-            android:name=".Sign"
+            android:name=".SignUp"
             android:theme="@style/AppTheme" />
         <activity android:name=".camera" />
         <activity android:name=".FavouriteActivity"></activity>
