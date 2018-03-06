@@ -24,14 +24,16 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,O
 	TextView tvmovies;
 	ListView lv;
 	ArrayAdapter<String>Adapter;
-	ImageView[] m=new ImageView[8];
-	int[] mid={R.id.imci,R.id.imdeadpool,R.id.imssm,R.id.imthehang,R.id.imwhyhim,R.id.imvacation,R.id.imfist,R.id.imlastvegas};
+	ImageView m;
+	int[] mid={R.drawable.ci,R.drawable.deadpool,R.drawable.ssm,R.drawable.thehang,R.drawable.whyhim,R.drawable.vacation,R.drawable.fist,R.drawable.lastvegas};
+
 	ArrayList<String>al=new ArrayList<String>();
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
+		m = (ImageView) findViewById(R.id.image);
 		blog=(Button)findViewById(R.id.blog);
 		bsign=(Button)findViewById(R.id.bsign);
 		bguest=(Button)findViewById(R.id.bguest);
@@ -63,12 +65,11 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,O
 		lv=(ListView)findViewById(R.id.lv);
 		lv.setAdapter(Adapter);
 		lv.setOnItemClickListener(this);
-		for(int i=0;i<m.length;i++){
-			m[i]=(ImageView)findViewById(mid[i]);
-		}
-
 
 	}
+
+
+
 
 	@Override
 	public void onClick(View v) {
@@ -95,12 +96,8 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,O
 
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-		for(int i=0;i<m.length;i++){
-			m[i].setVisibility(View.INVISIBLE);
-		}
 
-		m[position].setVisibility(View.VISIBLE);
-
+		m.setImageResource(mid[position]);
 
 	}
 	@Override
@@ -122,7 +119,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,O
 				startActivity(i);
 				break;
 		}
-			return super.onOptionsItemSelected(item);
+		return super.onOptionsItemSelected(item);
 
 	}
 

@@ -17,22 +17,16 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class Guest extends AppCompatActivity implements OnClickListener {
+public class Guest extends AppCompatActivity implements AdapterView.OnItemClickListener, OnClickListener {
 	Button b1,b2,b3,b4,b5,b6,bsign,blog;
 	TextView tvmovies,tvsign,tvci;
-	/*ImageButton[] imv=new ImageButton[4];
-	ImageButton[] imv2=new ImageButton[4];*/
-
-	ImageButton imv1,imv2;
-	int[] im={R.id.imcentral,R.id.imdeadpool,R.id.imssm,R.id.imthehang};
-	int[] im2={R.id.imwhyhim,R.id.imvacation,R.id.imfist,R.id.imlastvegas};
 
 	int[] photo1={R.drawable.ci,R.drawable.deadpool,R.drawable.ssm,R.drawable.thehang};
 	int[] photo2={R.drawable.whyhim,R.drawable.vacation,R.drawable.fist,R.drawable.lastvegas};
 
 	int youtube1,youtube2;
-	ListView lv1;
-	ArrayAdapter<Movie> Adapter;
+	ListView lvMovies;
+    CustomAdapter Adapter;
 	ArrayList<Movie> movies = new ArrayList<>();
 
 	@Override
@@ -60,21 +54,15 @@ public class Guest extends AppCompatActivity implements OnClickListener {
 
 
 
-		Adapter=new ArrayAdapter<Movie>(getApplicationContext(),android.R.layout.simple_list_item_1,movies);
-		lv1=(ListView)findViewById(R.id.lv);
-		lv1.setAdapter(Adapter);
-		lv1.setOnItemClickListener((AdapterView.OnItemClickListener) this);
+		Adapter=new CustomAdapter(getApplicationContext(),R.layout.custom_row_movie,movies);
+		lvMovies=(ListView)findViewById(R.id.lvMovies);
+		lvMovies.setAdapter(Adapter);
+		lvMovies.setOnItemClickListener(this);
 
 
 
 		bsign.setOnClickListener(this);
 		blog.setOnClickListener(this);
-
-		imv1.setOnClickListener(this);
-		imv2.setOnClickListener(this);
-
-		imv1.setImageResource(photo1[0]);
-		imv2.setImageResource(photo2[0]);
 
 	}
 
@@ -105,58 +93,13 @@ public class Guest extends AppCompatActivity implements OnClickListener {
 
 		}
 
-	/*	if(v==b1){
+	}
 
+	@Override
+	public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-			imv1.setImageResource(photo1[0]);
-			imv2.setImageResource(photo2[0]);
-youtube1=1;
-			youtube2=1;
-		}
-		if(v==b2){
-
-			imv1.setImageResource(photo1[1]);
-			imv2.setImageResource(photo2[1]);
-			youtube1=2;
-			youtube2=2;
-		}
-		if(v==b3){		
-
-
-			imv1.setImageResource(photo1[2]);
-			imv2.setImageResource(photo2[2]);
-			youtube1=3;
-			youtube2=3;
-		}if(v==b4){
-
-			imv1.setImageResource(photo1[3]);
-			imv2.setImageResource(photo2[3]);
-			youtube1=4;
-			youtube2=4;
-		}
-*/
-		if(v==imv1){
-			if(youtube1==1)
-			watchYoutubeVideo("MxEw3elSJ8M");
-			if(youtube1==2)
-				watchYoutubeVideo("9vN6DHB6bJc");
-			if(youtube1==3)
-				watchYoutubeVideo("5AwUdTIbA8I");
-			if(youtube1==4)
-				watchYoutubeVideo("KLAkxSjs8ZY");
-		}
-		if(v==imv2){
-			if(youtube2==1)
-				watchYoutubeVideo("CO6qLC4cL8E");
-			if(youtube2==2)
-				watchYoutubeVideo("kleG7XCqOb4");
-			if(youtube2==3)
-				watchYoutubeVideo("6YVBj2o_3mg");
-			if(youtube2==4)
-				watchYoutubeVideo("TvK3m0wJutI");
-		}
-
-	}}
+	}
+}
 
 
 

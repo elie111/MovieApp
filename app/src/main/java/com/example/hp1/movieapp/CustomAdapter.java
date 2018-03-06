@@ -5,7 +5,11 @@ package com.example.hp1.movieapp;
  */
 
 
+import android.content.ActivityNotFoundException;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,7 +38,7 @@ public class CustomAdapter extends ArrayAdapter<Movie> {
         LayoutInflater imageInflater = LayoutInflater.from(getContext());
         View cuView = imageInflater.inflate(resource, parent, false );
 
-        Movie movie = getItem(position);
+        final Movie movie = getItem(position);
         TextView title = (TextView) cuView.findViewById(R.id.tvTitle);
         ImageView image = (ImageView) cuView.findViewById(R.id.imgMovie);
 
@@ -50,12 +54,21 @@ public class CustomAdapter extends ArrayAdapter<Movie> {
                 Toast.makeText(getContext(),"Item Poisition: Add to Favourite "+position,Toast.LENGTH_LONG).show();
             }
         });
-        btnAddToFavourite.setOnClickListener(new View.OnClickListener() {
+        btnWathTrailer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getContext(),"Item Poisition: Watch Trailer"+position,Toast.LENGTH_LONG).show();
+                watchYoutubeVideo(movie.getYoutube());
             }
         });
         return cuView;
+    }
+    public void watchYoutubeVideo(String id) {
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.youtube.com/watch?v=" + id));
+        browserIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        try {
+            getContext().startActivity(browserIntent);
+        } catch (ActivityNotFoundException ex) {
+            Log.d("Cannot Play Video",ex.toString());
+        }
     }
 }
