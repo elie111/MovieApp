@@ -42,18 +42,13 @@ public class CustomAdapter extends ArrayAdapter<Movie> {
         TextView title = (TextView) cuView.findViewById(R.id.tvTitle);
         ImageView image = (ImageView) cuView.findViewById(R.id.imgMovie);
 
-        Button btnAddToFavourite = (Button) cuView.findViewById(R.id.btnAddTotFavourite);
+
         Button btnWathTrailer = (Button) cuView.findViewById(R.id.btnWathTrailer);
 
         title.setText(movie.getTitle());
         image.setImageResource(movie.getImageId());
 
-        btnAddToFavourite.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getContext(),"Item Poisition: Add to Favourite "+position,Toast.LENGTH_LONG).show();
-            }
-        });
+
         btnWathTrailer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -71,4 +66,5 @@ public class CustomAdapter extends ArrayAdapter<Movie> {
             Log.d("Cannot Play Video",ex.toString());
         }
     }
+
 }

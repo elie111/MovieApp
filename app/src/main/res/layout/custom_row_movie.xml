@@ -41,18 +41,10 @@
             android:layout_height="wrap_content">
 
             <Button
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:id="@+id/btnAddTotFavourite"
-                android:background="@android:drawable/btn_star_big_on"
-                android:layout_weight="1" />
-
-            <Button
-                android:text="Wath Trailer"
-                android:layout_width="match_parent"
+                android:text="Watch "
+                android:layout_width="190dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/btnWathTrailer"
-                android:layout_weight="1" />
+                android:id="@+id/btnWathTrailer" />
         </LinearLayout>
 
     </LinearLayout>

@@ -58,9 +58,6 @@ public class Login extends AppCompatActivity implements OnClickListener{
 		breturn=(Button)findViewById(R.id.breturn);
 		blogin=(Button)findViewById(R.id.blogin);
 
-		tvpassword=(TextView)findViewById(R.id.tvpassword);
-		tvmail=(TextView)findViewById(R.id.tvmail);
-		tvwelcome=(TextView)findViewById(R.id.tvwelcome);
 
 		etpassword=(EditText)findViewById(R.id.etpassword);
 		etmail=(EditText)findViewById(R.id.etmail);
@@ -97,7 +94,7 @@ public class Login extends AppCompatActivity implements OnClickListener{
 							Toast.makeText(Login.this, "Authentication failed.",
 									Toast.LENGTH_SHORT).show();
 						}else{
-							Intent i=new Intent(getBaseContext(), Home.class);
+							Intent i=new Intent(getBaseContext(),Home.class);
 							startActivity(i);
 						}
 

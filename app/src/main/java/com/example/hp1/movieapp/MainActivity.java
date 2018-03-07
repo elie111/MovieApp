@@ -20,7 +20,7 @@ import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity implements OnClickListener,OnItemClickListener{
-	Button blog,bsign,bguest,babout,bdelete;
+	Button blog,bsign,bguest;
 	TextView tvmovies;
 	ListView lv;
 	ArrayAdapter<String>Adapter;
@@ -38,14 +38,14 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,O
 		bsign=(Button)findViewById(R.id.bsign);
 		bguest=(Button)findViewById(R.id.bguest);
 
-		bdelete=(Button)findViewById(R.id.btdelete);
+
 
 		tvmovies=(TextView)findViewById(R.id.tvmovies);
 
 		blog.setOnClickListener(this);
 		bsign.setOnClickListener(this);
 		bguest.setOnClickListener(this);
-		bdelete.setOnClickListener(this);
+
 		al.add("central intelligence");
 		al.add("deadpool");
 		al.add("suicide squad");
@@ -79,10 +79,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,O
 			i=new Intent(MainActivity.this,Login.class);
 			startActivity(i);
 		}
-		if(v==bdelete){
-			i=new Intent(MainActivity.this, Delete.class);
-			startActivity(i);
-		}
+
 		if(v==bsign){
 			i=new Intent(MainActivity.this, SignUp.class);
 			startActivity(i);
