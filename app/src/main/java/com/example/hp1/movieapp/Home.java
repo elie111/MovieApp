@@ -31,17 +31,17 @@ public class Home extends AppCompatActivity implements AdapterView.OnItemClickLi
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_guest);
+		setContentView(R.layout.activity_home);
 
 
-		movies.add(new Movie("2016","central intelligence","comedy",R.drawable.ci, "MxEw3elSJ8M"));
-		movies.add(new Movie("2016","why him?","comedy",R.drawable.whyhim, "CO6qLC4cL8E"));
-		movies.add(new Movie("2016","deadpool","comedy",R.drawable.deadpool, "9vN6DHB6bJc"));
-		movies.add(new Movie("2015","vacation","comedy",R.drawable.vacation, "kleG7XCqOb4"));
-		movies.add(new Movie("2016","suicide squad","action",R.drawable.ssm, "5AwUdTIbA8I"));
-		movies.add(new Movie("2017","fist fight","comedy",R.drawable.fist, "6YVBj2o_3mg"));
-		movies.add(new Movie("2009","the hangover","comedy",R.drawable.thehang, "KLAkxSjs8Z"));
-		movies.add(new Movie("2013","last vegas","comedy",R.drawable.lastvegas, "TvK3m0wJutI"));
+		movies.add(new Movie("2016","central intelligence","comedy",R.drawable.ci, "http://www.anakbnet.com/video/file.php?f=1890"));
+		movies.add(new Movie("2016","why him?","comedy",R.drawable.whyhim, "http://cima4up.tv/%D9%85%D8%B4%D8%A7%D9%87%D8%AF%D8%A9-%D9%81%D9%8A%D9%84%D9%85-why-him-2016-%D9%850%D8%AA%D8%B1%D8%AC%D9%85-10/"));
+		movies.add(new Movie("2016","deadpool","comedy",R.drawable.deadpool, "http://www.anakbnet.com/video/file.php?f=1808"));
+		movies.add(new Movie("2015","vacation","comedy",R.drawable.vacation, "http://www.anakbnet.com/video/file.php?f=1681"));
+		movies.add(new Movie("2016","suicide squad","action",R.drawable.ssm, "http://www.anakbnet.com/video/file.php?f=1934"));
+		movies.add(new Movie("2017","fist fight","comedy",R.drawable.fist, "http://www.anakbnet.com/video/file.php?f=2021"));
+		movies.add(new Movie("2009","the hangover","comedy",R.drawable.thehang, "http://www.anakbnet.com/video/file.php?f=1082"));
+		movies.add(new Movie("2013","last vegas","comedy",R.drawable.lastvegas, "http://www.anakbnet.com/video/file.php?f=1189"));
 
 
 
@@ -57,26 +57,11 @@ public class Home extends AppCompatActivity implements AdapterView.OnItemClickLi
 		lvMovies=(ListView)findViewById(R.id.lvMovies);
 		lvMovies.setAdapter(Adapter);
 		lvMovies.setOnItemClickListener(this);
-
-
-
-
 		blog.setOnClickListener(this);
 
 	}
 
-	/**
-	 *
-	 * @param id
-	 */
-	public void watchYoutubeVideo(String id) {
-		Intent browserIntent = new Intent(Intent.ACTION_VIEW,Uri.parse("http://www.youtube.com/watch?v=" + id));
-		try {
-			startActivity(browserIntent);
-		} catch (ActivityNotFoundException ex) {
-			Log.d("Cannot Play Video",ex.toString());
-		}
-	}
+
 
 
 	@Override

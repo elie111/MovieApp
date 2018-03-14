@@ -58,7 +58,7 @@ public class CustomAdapter extends ArrayAdapter<Movie> {
         return cuView;
     }
     public void watchYoutubeVideo(String id) {
-        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.youtube.com/watch?v=" + id));
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(id));
         browserIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         try {
             getContext().startActivity(browserIntent);
@@ -67,4 +67,6 @@ public class CustomAdapter extends ArrayAdapter<Movie> {
         }
     }
 
-}
+    }
+
+

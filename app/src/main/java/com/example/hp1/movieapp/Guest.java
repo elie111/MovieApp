@@ -35,14 +35,14 @@ public class Guest extends AppCompatActivity implements AdapterView.OnItemClickL
 		setContentView(R.layout.activity_guest);
 
 
-		movies.add(new Movie("2016","central intelligence","comedy",R.drawable.ci, "MxEw3elSJ8M"));
-		movies.add(new Movie("2016","why him?","comedy",R.drawable.whyhim, "CO6qLC4cL8E"));
-		movies.add(new Movie("2016","deadpool","comedy",R.drawable.deadpool, "9vN6DHB6bJc"));
-		movies.add(new Movie("2015","vacation","comedy",R.drawable.vacation, "kleG7XCqOb4"));
-		movies.add(new Movie("2016","suicide squad","action",R.drawable.ssm, "5AwUdTIbA8I"));
-		movies.add(new Movie("2017","fist fight","comedy",R.drawable.fist, "6YVBj2o_3mg"));
-		movies.add(new Movie("2009","the hangover","comedy",R.drawable.thehang, "KLAkxSjs8Z"));
-		movies.add(new Movie("2013","last vegas","comedy",R.drawable.lastvegas, "TvK3m0wJutI"));
+		movies.add(new Movie("2016","central intelligence","comedy",R.drawable.ci, "http://www.youtube.com/watch?v=MxEw3elSJ8M"));
+		movies.add(new Movie("2016","why him?","comedy",R.drawable.whyhim, "http://www.youtube.com/watch?v=CO6qLC4cL8E"));
+		movies.add(new Movie("2016","deadpool","comedy",R.drawable.deadpool, "http://www.youtube.com/watch?v=9vN6DHB6bJc"));
+		movies.add(new Movie("2015","vacation","comedy",R.drawable.vacation, "http://www.youtube.com/watch?v=kleG7XCqOb4"));
+		movies.add(new Movie("2016","suicide squad","action",R.drawable.ssm, "http://www.youtube.com/watch?v=5AwUdTIbA8I"));
+		movies.add(new Movie("2017","fist fight","comedy",R.drawable.fist, "http://www.youtube.com/watch?v=6YVBj2o_3mg"));
+		movies.add(new Movie("2009","the hangover","comedy",R.drawable.thehang, "http://www.youtube.com/watch?v=KLAkxSjs8Z"));
+		movies.add(new Movie("2013","last vegas","comedy",R.drawable.lastvegas, "http://www.youtube.com/watch?v=TvK3m0wJutI"));
 
 
 		bsign=(Button)findViewById(R.id.bsignin);
@@ -66,18 +66,9 @@ public class Guest extends AppCompatActivity implements AdapterView.OnItemClickL
 
 	}
 
-	/**
-	 *
-	 * @param id
-     */
-	public void watchYoutubeVideo(String id) {
-		Intent browserIntent = new Intent(Intent.ACTION_VIEW,Uri.parse("http://www.youtube.com/watch?v=" + id));
-		try {
-			startActivity(browserIntent);
-		} catch (ActivityNotFoundException ex) {
-			Log.d("Cannot Play Video",ex.toString());
-		}
-	}
+
+
+
 
 
 	@Override

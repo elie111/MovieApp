@@ -33,7 +33,10 @@
             android:id="@+id/tvTitle"
             android:layout_weight="1"
             android:textAlignment="center"
-            android:padding="15dp" />
+            android:padding="15dp"
+            android:textStyle="normal|bold|italic"
+            android:textAllCaps="true"
+            android:textSize="20sp" />
 
         <LinearLayout
             android:orientation="horizontal"

@@ -19,10 +19,12 @@
             android:layout_height="wrap_content"
             android:text="MOVIES"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="#22f00f"
+            android:textColor="#54c328"
             android:textStyle="bold|italic"
             android:textSize="30sp"
-            android:padding="15dp" />
+            android:padding="15dp"
+            android:textAllCaps="true"
+            android:textAlignment="center" />
     </LinearLayout>
 
     <LinearLayout
@@ -36,8 +38,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="logout"
-            android:textColor="#22f00f"
-            android:padding="15dp" />
+            android:textColor="#54c328"
+            android:padding="15dp"
+            android:textSize="20sp"
+            android:textStyle="normal|bold|italic" />
     </LinearLayout>
 
     <ListView

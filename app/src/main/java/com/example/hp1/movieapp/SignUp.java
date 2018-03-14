@@ -73,7 +73,7 @@ public class SignUp extends AppCompatActivity implements OnClickListener{
 			Intent intent=new Intent(SignUp.this,MainActivity.class);
 			startActivity(intent);
 		}else{
-            createAccount(etmail.getText().toString(), etpassword.getText().toString());
+			createAccount(etmail.getText().toString(), etpassword.getText().toString());
 		}
 
 	}
@@ -92,11 +92,9 @@ public class SignUp extends AppCompatActivity implements OnClickListener{
 							Toast.makeText(SignUp.this, "Authentication failed.",
 									Toast.LENGTH_SHORT).show();
 						}else{
-                            Intent i=new Intent(getApplicationContext(), Login.class);
-                            startActivity(i);
-                        }
-
-						// ...
+							Intent i=new Intent(getApplicationContext(), Login.class);
+							startActivity(i);
+						}
 					}
 				});
 	}

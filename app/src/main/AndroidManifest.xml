@@ -22,9 +22,6 @@
             android:name=".About"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".Delete"
-            android:theme="@style/AppTheme" />
-        <activity
             android:name=".Guest"
             android:theme="@style/AppTheme" />
         <activity
@@ -35,7 +32,6 @@
             android:name=".SignUp"
             android:theme="@style/AppTheme" />
         <activity android:name=".camera" />
-        <activity android:name=".FavouriteActivity"></activity>
     </application>
 
 </manifest>
