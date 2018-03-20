@@ -40,7 +40,7 @@ public class SignUp extends AppCompatActivity implements OnClickListener{
 			@Override
 			public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
 				FirebaseUser user = firebaseAuth.getCurrentUser();
-				if (user != null) {
+				if (user != null ) {
 					// User is signed in
 					Log.d(" LOGIN ", "onAuthStateChanged:signed_in:" + user.getUid());
 				} else {
@@ -73,7 +73,15 @@ public class SignUp extends AppCompatActivity implements OnClickListener{
 			Intent intent=new Intent(SignUp.this,MainActivity.class);
 			startActivity(intent);
 		}else{
-			createAccount(etmail.getText().toString(), etpassword.getText().toString());
+			if(etmail.getText().toString().equals("") ||etpassword.getText().toString().equals("") ){
+				Toast.makeText(SignUp.this, "Empty Email or Password",Toast.LENGTH_SHORT).show();
+			}else {
+				try {
+					createAccount(etmail.getText().toString(), etpassword.getText().toString());
+				}catch (Exception e) {
+					Toast.makeText(SignUp.this, "Failed to Create Account", Toast.LENGTH_SHORT).show();
+				}
+			}
 		}
 
 	}

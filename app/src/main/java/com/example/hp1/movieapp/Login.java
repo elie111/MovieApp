@@ -45,7 +45,7 @@ public class Login extends AppCompatActivity implements OnClickListener{
 			@Override
 			public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
 				FirebaseUser user = firebaseAuth.getCurrentUser();
-				if (user != null) {
+				if (user != null ) {
 					// User is signed in
 					Log.d(" LOGIN ", "onAuthStateChanged:signed_in:" + user.getUid());
 				} else {
