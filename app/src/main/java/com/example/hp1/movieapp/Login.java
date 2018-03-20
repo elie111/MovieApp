@@ -109,11 +109,14 @@ public class Login extends AppCompatActivity implements OnClickListener{
 			startActivity(i);
 		}
 		if(v==blogin){
-			pass=etpassword.getText().toString();
-			mail=etmail.getText().toString();
+			if(etmail.getText().toString().equals("") ||etpassword.getText().toString().equals("") )
+				Toast.makeText(Login.this, "Empty Email or Password",Toast.LENGTH_SHORT).show();
+				else{
+			pass = etpassword.getText().toString();
+				mail = etmail.getText().toString();
 
-			signIn(mail, pass);
-
+				signIn(mail, pass);
+			}
 		}
 	}
 }
