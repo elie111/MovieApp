@@ -96,6 +96,7 @@ public class Login extends AppCompatActivity implements OnClickListener{
 						}else{
 							Intent i=new Intent(getBaseContext(),Home.class);
 							startActivity(i);
+							// log in
 						}
 
 					}
@@ -107,15 +108,18 @@ public class Login extends AppCompatActivity implements OnClickListener{
 		if(v==breturn){
 			Intent i=new Intent(this, MainActivity.class);
 			startActivity(i);
+			// go back to the home page
 		}
 		if(v==blogin){
 			if(etmail.getText().toString().equals("") ||etpassword.getText().toString().equals("") )
 				Toast.makeText(Login.this, "Empty Email or Password",Toast.LENGTH_SHORT).show();
+			//if the email or password are empty return "Empty Email or Password"
 				else{
 			pass = etpassword.getText().toString();
 				mail = etmail.getText().toString();
 
 				signIn(mail, pass);
+				//if the password and the email are correct log in
 			}
 		}
 	}

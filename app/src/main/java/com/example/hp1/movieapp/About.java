@@ -24,6 +24,7 @@ public class About extends AppCompatActivity implements OnClickListener{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_about);
+
 		breturn=(Button)findViewById(R.id.breturn);
 
 		tv=(TextView)findViewById(R.id.tv);
@@ -39,29 +40,10 @@ public class About extends AppCompatActivity implements OnClickListener{
 		if(v==breturn){
 			Intent i=new Intent(this,MainActivity.class);
 			startActivity(i);
+			// go back to the main page
 		}
 	}
 
-   /*public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-		// TODO Auto-generated method stub
-		if(position==1)
-			Toast.makeText(getApplicationContext(), "toast", Toast.LENGTH_SHORT).show();
-
-		else{
-			if(position==2){
-				Intent intent=new Intent(About.this,MainActivity.class);
-				startActivity(intent);
-			}
-
-		}
-	}
-
-	@Override
-	*/
-	public void onNothingSelected(AdapterView<?> parent) {
-		// TODO Auto-generated method stub
-
-	}
 
 
 }

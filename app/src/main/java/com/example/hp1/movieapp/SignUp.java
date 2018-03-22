@@ -72,10 +72,13 @@ public class SignUp extends AppCompatActivity implements OnClickListener{
 		if(v==breturn){
 			Intent intent=new Intent(SignUp.this,MainActivity.class);
 			startActivity(intent);
+			// go home
 		}else{
 			if(etmail.getText().toString().equals("") ||etpassword.getText().toString().equals("") ){
 				Toast.makeText(SignUp.this, "Empty Email or Password",Toast.LENGTH_SHORT).show();
-			}else {
+			}
+			//if the password or email are empty return "Empty Email or Password"
+			else {
 				try {
 					createAccount(etmail.getText().toString(), etpassword.getText().toString());
 				}catch (Exception e) {
@@ -102,6 +105,7 @@ public class SignUp extends AppCompatActivity implements OnClickListener{
 						}else{
 							Intent i=new Intent(getApplicationContext(), Login.class);
 							startActivity(i);
+							// go to login page
 						}
 					}
 				});

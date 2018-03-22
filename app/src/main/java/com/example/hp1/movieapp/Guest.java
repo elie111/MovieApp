@@ -44,7 +44,7 @@ public class Guest extends AppCompatActivity implements AdapterView.OnItemClickL
 		movies.add(new Movie("2009","the hangover","comedy",R.drawable.thehang, "http://www.youtube.com/watch?v=KLAkxSjs8Z"));
 		movies.add(new Movie("2013","last vegas","comedy",R.drawable.lastvegas, "http://www.youtube.com/watch?v=TvK3m0wJutI"));
 
-
+// create new movies
 		bsign=(Button)findViewById(R.id.bsignin);
 		blog=(Button)findViewById(R.id.blog);
 
@@ -77,11 +77,12 @@ public class Guest extends AppCompatActivity implements AdapterView.OnItemClickL
 		if(v==bsign){
 			Intent intent=new Intent(this,SignUp.class);
 			startActivity(intent);
+			// go to sign
 		}
 		if(v==blog){
 			Intent intent=new Intent(this,MainActivity.class);
 			startActivity(intent);
-
+// go to log
 		}
 
 	}

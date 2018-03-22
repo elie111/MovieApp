@@ -43,7 +43,7 @@ public class Home extends AppCompatActivity implements AdapterView.OnItemClickLi
 		movies.add(new Movie("2009","the hangover","comedy",R.drawable.thehang, "http://www.anakbnet.com/video/file.php?f=1082"));
 		movies.add(new Movie("2013","last vegas","comedy",R.drawable.lastvegas, "http://www.anakbnet.com/video/file.php?f=1189"));
 
-
+// create a new movie
 
 		blog=(Button)findViewById(R.id.blog);
 
@@ -71,7 +71,7 @@ public class Home extends AppCompatActivity implements AdapterView.OnItemClickLi
 		if(v==blog){
 			Intent intent=new Intent(this,MainActivity.class);
 			startActivity(intent);
-
+// log out
 		}
 
 	}

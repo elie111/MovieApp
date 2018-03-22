@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,O
 		al.add("vecation");
 		al.add("fist fight");
 		al.add("last vegas");
+		//add movies to the list
 
 
 
@@ -78,16 +79,18 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,O
 		if(v==blog){
 			i=new Intent(MainActivity.this,Login.class);
 			startActivity(i);
+			//go to log
 		}
 
 		if(v==bsign){
 			i=new Intent(MainActivity.this, SignUp.class);
 			startActivity(i);
+			//go to sign
 		}
 		if(v==bguest){
 			i=new Intent(MainActivity.this, Guest.class);
 			startActivity(i);
-
+//go to guest
 		}
 	}
 
@@ -110,10 +113,12 @@ public class MainActivity extends AppCompatActivity implements OnClickListener,O
 			case R.id.camera:
 				i = new Intent(getApplicationContext(), camera.class);
 				startActivity(i);
+				//go to camera
 				break;
 			case R.id.aboutMenu:
 				i = new Intent(MainActivity.this, About.class);
 				startActivity(i);
+				// go to about
 				break;
 		}
 		return super.onOptionsItemSelected(item);

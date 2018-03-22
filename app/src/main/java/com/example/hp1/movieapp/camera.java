@@ -45,10 +45,12 @@ public class camera extends AppCompatActivity implements View.OnClickListener{
         if(v==bcamera){
             Intent i=new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
             startActivityForResult(i,TAKE_IMAGE);
+            // go to the camera
         }
         else{
             Intent i=new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
             startActivityForResult(i,SELECT_IMAGE);
+            //go to gallery
         }
     }
 
@@ -58,7 +60,9 @@ public class camera extends AppCompatActivity implements View.OnClickListener{
             Bundle Extra =data.getExtras();
             bitmap=(Bitmap) Extra.get("Data");
             imageView.setImageBitmap(bitmap);
+            // save image
         }
+
         else if(requestCode==SELECT_IMAGE && resultCode==RESULT_OK){
             Uri targetUri=data.getData();
             Toast.makeText(getApplicationContext(),targetUri.toString(), Toast.LENGTH_LONG);
@@ -85,6 +89,8 @@ public class camera extends AppCompatActivity implements View.OnClickListener{
 
 
         }
+
+        // choose image from gallery
     }
     public File saveImage(Bitmap bitmap){
         File root = Environment.getExternalStorageDirectory();// internal storage launching .

@@ -66,7 +66,7 @@ public class CustomAdapter extends ArrayAdapter<Movie> {
             Log.d("Cannot Play Video",ex.toString());
         }
     }
-
+// go to youtube and watch the video id
     }
 
 
