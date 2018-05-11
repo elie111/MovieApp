@@ -29,10 +29,6 @@ public class About extends AppCompatActivity implements OnClickListener{
 
 		tv=(TextView)findViewById(R.id.tv);
 		breturn.setOnClickListener(this);
-
-
-
-
 	}
 	@Override
 	public void onClick(View v) {
@@ -43,7 +39,4 @@ public class About extends AppCompatActivity implements OnClickListener{
 			// go back to the main page
 		}
 	}
-
-
-
 }

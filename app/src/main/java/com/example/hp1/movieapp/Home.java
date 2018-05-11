@@ -1,9 +1,15 @@
 package com.example.hp1.movieapp;
 
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.ActivityNotFoundException;
+import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -17,7 +23,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class Home extends AppCompatActivity implements AdapterView.OnItemClickListener, OnClickListener {
+public class Home extends AppCompatActivity implements OnClickListener {
 	Button b1,b2,b3,b4,b5,b6,blog;
 	TextView tvmovies,tvci;
 
@@ -49,36 +55,40 @@ public class Home extends AppCompatActivity implements AdapterView.OnItemClickLi
 
 
 		tvmovies=(TextView)findViewById(R.id.tvmovies);
-
-
-
-
 		Adapter=new CustomAdapter(getApplicationContext(),R.layout.custom_row_movie,movies);
 		lvMovies=(ListView)findViewById(R.id.lvMovies);
 		lvMovies.setAdapter(Adapter);
-		lvMovies.setOnItemClickListener(this);
 		blog.setOnClickListener(this);
 
 	}
 
 
-
-
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
-		
+
 		if(v==blog){
+			showNotification();
 			Intent intent=new Intent(this,MainActivity.class);
 			startActivity(intent);
 // log out
 		}
 
 	}
+	public void showNotification() {
+		PendingIntent pi = PendingIntent.getActivity(this, 0, new Intent(this, MainActivity.class), 0);
+		Resources r = getResources();
+		Notification notification = new NotificationCompat.Builder(this)
+				.setTicker(r.getString(R.string.notification_title))
+				.setSmallIcon(android.R.drawable.ic_menu_report_image)
+				.setContentTitle(r.getString(R.string.notification_title))
+				.setContentText(r.getString(R.string.notification_text))
+				.setContentIntent(pi)
+				.setAutoCancel(true)
+				.build();
 
-	@Override
-	public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
+		NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+		notificationManager.notify(0, notification);
 	}
 }
 

@@ -5,6 +5,9 @@ package com.example.hp1.movieapp;
  */
 
 
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
@@ -17,7 +20,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.List;
 
@@ -53,6 +55,7 @@ public class CustomAdapter extends ArrayAdapter<Movie> {
             @Override
             public void onClick(View view) {
                 watchYoutubeVideo(movie.getYoutube());
+
             }
         });
         return cuView;
@@ -67,6 +70,7 @@ public class CustomAdapter extends ArrayAdapter<Movie> {
         }
     }
 // go to youtube and watch the video id
-    }
+
+}
 
 
